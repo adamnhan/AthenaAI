@@ -21,7 +21,13 @@
     .list {
       display: flex;
       flex-direction: column;
-      overflow: scroll;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      scrollbar-width: none;
     }
   
     a {

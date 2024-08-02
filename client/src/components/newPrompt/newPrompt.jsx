@@ -16,13 +16,16 @@ const NewPrompt = ({ data }) => {
     aiData: {},
   });
 
+  const chatHistory = data?.history?.length
+  ? data.history.map(({ role, parts }) => ({
+      role,
+      parts: [{ text: parts[0].text }],
+    }))
+  : [{ role: "user", parts: [{ text: "" }] }];
+
+
   const chat = model.startChat({
-    history: [
-      data?.history.map(({ role, parts }) => ({
-        role,
-        parts: [{ text: parts[0].text }],
-      })),
-    ],
+    history: chatHistory,
     generationConfig: {
       // maxOutputTokens: 100,
     },
@@ -112,7 +115,7 @@ const NewPrompt = ({ data }) => {
       }
     }
     hasRun.current = true;
-  }, []);
+  }, [data]);
 
   return (
     <>
