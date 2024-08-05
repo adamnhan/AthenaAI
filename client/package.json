@@ -18,17 +18,17 @@
     "react-dom": "19.0.0-rc-8b08e99e-20240713",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.25.1",
-    "react-type-animation": "^3.2.0"
+    "react-type-animation": "^3.2.0",
+    "vite": "^5.3.4",  
+    "@vitejs/plugin-react": "^4.3.1"  
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
-    "vite": "^5.3.4"
+    "eslint-plugin-react-refresh": "^0.4.7"
   },
   "description": "This template provides a minimal setup to get React 19 working in Vite with HMR and some ESLint rules.",
   "main": "vite.config.js",
