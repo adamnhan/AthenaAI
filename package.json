@@ -1,12 +1,8 @@
 {
-    "name": "aire-ai",
-    "version": "1.0.0",
-    "scripts": {
-      "start": "node backend/index.js",
-      "heroku-postbuild": "npm install --prefix client --legacy-peer-deps && npm run build --prefix client && npm install --prefix backend --legacy-peer-deps"
-    },
-    "engines": {
-      "node": "16.x"
-    }
-  }
-  
+  "name": "your-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "private": true
+}
