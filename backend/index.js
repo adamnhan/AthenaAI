@@ -171,6 +171,12 @@ app.use((err, req, res, next) => {
   res.status(401).send("Unauthenticated!");
 });
 
+app.use(express.static(path.join(__dirname, "../client")))
+
+app.get("*", (req, res)=> {
+  res.sendFile(__dirname, "../client", "index.html")
+})
+
 app.listen(port, () => {
   connect();
   console.log("Server running on port 3000");
