@@ -8,7 +8,7 @@
         "src": "client/package.json",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "client/build"
+          "distDir": "client/dist"
         }
       }
     ],
@@ -22,7 +22,6 @@
         "dest": "/client/$1"
       }
     ],
-    "buildCommand": "npm install --legacy-peer-deps && npm run build"
+    "buildCommand": "yarn install --legacy-peer-deps && yarn build --prefix client && yarn install --prefix backend --legacy-peer-deps"
   }
-  
   
