@@ -10,7 +10,7 @@ import { ClerkExpressRequireAuth } from "@clerk/clerk-sdk-node";
 import dotenv from "dotenv";
 
 dotenv.config();
-
+const fetch = require('node-fetch');
 const port = process.env.PORT || 3000;
 const app = express();
 
